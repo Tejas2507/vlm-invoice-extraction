@@ -64,23 +64,20 @@ In folder mode, the script warms up once and processes all images efficiently, s
 ```mermaid
 flowchart LR
     In([Input Image]) --> YOLO["Visual Anchoring \n(YOLOv11s)"]
-    YOLO -->|Crops: Header, Table| VLM["Visual Language Model \n(Qwen3-VL 8B 4-bit)"]
+    YOLO -->|Crops: Header, Table| VLM["Visual Language Model
+                                         (Qwen3-VL 8B 4-bit)"]
     
     subgraph "Intelligent Extraction"
-        VLM -->|Pass 1| Junior["Junior Analyst \n(Fast Extraction)"]
+        VLM -->|Pass 1| Junior["Junior Analyst
+                                (Fast Extraction)"]
         Junior --> Check{Confidence Check}
         Check -->|High Confidence| Out([JSON Output])
-        Check -->|Low Confidence| Senior["Senior Supervisor\n(Detailed Re-check)"]
+        Check -->|Low Confidence| Senior["Senior Supervisor
+                                          (Detailed Re-check)"]
         Senior --> Out
     end
 ```
-
-### How It Works
-1.  **Visual Anchoring:** YOLOv11 detects the Invoice Header, Signature, and Stamp locations.
-2.  **Dynamic Zooming:** High-density regions (like the "Model Name" text) are dynamically cropped and upscaled.
-3.  **VLM Inference:** The Qwen-VL model reads the visual features directly, guided by the YOLO anchors.
-4.  **Guardrails:** Programmatic logic removes hallmarks (like "47 HP" appearing in the Name field) and strictly formats the JSON output.
-
+### How It Works1.  **Visual Anchoring:** YOLOv11 detects the Invoice Header, Signature, and Stamp locations.2.  **Dynamic Zooming:** High-density regions (like the "Model Name" text) are dynamically cropped and upscaled.3.  **VLM Inference:** The Qwen-VL model reads the visual features directly, guided by the YOLO anchors.4.  **Guardrails:** Programmatic logic removes hallmarks (like "47 HP" appearing in the Name field) and strictly formats the JSON output.
 ---
 
 ## 📊 Performance & Cost
