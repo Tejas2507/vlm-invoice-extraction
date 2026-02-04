@@ -63,11 +63,11 @@ In folder mode, the script warms up once and processes all images efficiently, s
 
 ```mermaid
 flowchart LR
-    In([Input Image]) --> YOLO["Visual Anchoring\n(YOLOv11s)"]
-    YOLO -->|Crops: Header, Table| VLM["Visual Language Model\n(Qwen3-VL 8B 4-bit)"]
+    In([Input Image]) --> YOLO["Visual Anchoring \n(YOLOv11s)"]
+    YOLO -->|Crops: Header, Table| VLM["Visual Language Model \n(Qwen3-VL 8B 4-bit)"]
     
     subgraph "Intelligent Extraction"
-        VLM -->|Pass 1| Junior["Junior Analyst\n(Fast Extraction)"]
+        VLM -->|Pass 1| Junior["Junior Analyst \n(Fast Extraction)"]
         Junior --> Check{Confidence Check}
         Check -->|High Confidence| Out([JSON Output])
         Check -->|Low Confidence| Senior["Senior Supervisor\n(Detailed Re-check)"]
