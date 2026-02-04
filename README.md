@@ -63,7 +63,8 @@ In folder mode, the script warms up once and processes all images efficiently, s
 
 ```mermaid
 flowchart LR
-    In([Input Image]) --> YOLO["Visual Anchoring \n(YOLOv11s)"]
+    In([Input Image]) --> YOLO["Visual Anchoring
+                                   (YOLOv11s)"]
     YOLO -->|Crops: Header, Table| VLM["Visual Language Model
                                          (Qwen3-VL 8B 4-bit)"]
     
