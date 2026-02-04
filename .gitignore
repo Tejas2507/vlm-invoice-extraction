@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.env
+
+# Models & Large Files (Ensure these are not committed if >100MB)
+models/
+utils/unsloth_model/
+*.pt
+*.safetensors
+*.bin
+*.h5
+
+# Output
+sample_output/
+result.json
+logs/
+
+# MacOS
+.DS_Store

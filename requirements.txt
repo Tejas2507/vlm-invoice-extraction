@@ -1,0 +1,23 @@
+--index-url https://download.pytorch.org/whl/cu118
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+
+# Core HuggingFace
+transformers==4.46.0
+datasets==3.1.0
+peft==0.13.2
+
+# Quantization
+bitsandbytes==0.44.1
+trl==0.12.0
+
+# Utilities
+accelerate==1.1.0
+pillow==11.0.0
+tqdm==4.67.1
+RapidFuzz==3.10.0
+ultralytics==8.3.30
+
+# Unsloth
+unsloth
