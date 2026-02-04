@@ -80,7 +80,7 @@ flowchart LR
 ```
 ---
 
-## How it Works
+## ⚙️ How it Works
 
 1.**Visual Anchoring:** YOLOv11 detects the Invoice Header, Signature, and Stamp locations.  
 2. **Dynamic Zooming:** High-density regions (like the "Model Name" text) are dynamically cropped and upscaled.  
