@@ -80,6 +80,7 @@ flowchart LR
 ```
 
 ### How It Works    
+
 1.**Visual Anchoring:** YOLOv11 detects the Invoice Header, Signature, and Stamp locations.  
 2. **Dynamic Zooming:** High-density regions (like the "Model Name" text) are dynamically cropped and upscaled.  
 3. **VLM Inference:** The Qwen-VL model reads the visual features directly, guided by the YOLO anchors.
